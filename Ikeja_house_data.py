@@ -22,23 +22,6 @@ doc = requests.get(house_for_sale, headers=headers).text
 
 house_data = BeautifulSoup(doc, "html5lib")
 
-# house_containers = html_soup.find_all("div", class_="wp-block property list")
-# # first = house_containers
-
-# # title = first[0].find_all("h4", class_="content-title")[0]
-# # location = first[0].find_all("address")[0].text.strip()
-# # location[location.find(",") + 2 :]
-# # price = first[0].find_all("span", class_="pull-sm-left")[0].text
-# date = first[0].find_all("span", class_="added-on")[0].text
-
-
-# # print(date_posted)
-# description = first[0].find_all("p")[0].text
-# link = "https://nigeriapropertycentre.com/" + first[0].find_all("a")[0].get("href")
-
-# imgurl = first[0].find("img").get("src")
-# size = first[13].find_all("span")[9]
-
 
 def date_formatter(item, date):
     date = item.find_all("span", class_="added-on")[0].text
@@ -141,4 +124,3 @@ lagos = pd.DataFrame(
 )[cols]
 
 lagos.to_excel("ikeja_raw.xls")
-
