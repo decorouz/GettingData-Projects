@@ -1,4 +1,4 @@
-# Python for Data Science Project
+# Data Analysis Projects
 
 This repository contains from exploring the IBM course titled Python for Data Science Project on Edx and other Web scrapping Projects.
 
